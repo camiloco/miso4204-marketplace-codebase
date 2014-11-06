@@ -28,6 +28,16 @@
 define(['component/_rewardComponent'], function() {
     App.Component.RewardComponent = App.Component._RewardComponent.extend({
         postInit: function(){
+            this.toolbarComponent.removeButton("create");  
+            this.toolbarComponent.addButton({
+                 name: 'alert',
+                 icon: 'glyphicon-certificate',
+                displayName: 'Acumular Puntos',
+                show: true,
+                menu: 'utils'
+            },
+            function(){alert("Se han acumulado los XXX puntos");},
+            this);
 			
         }
     });
