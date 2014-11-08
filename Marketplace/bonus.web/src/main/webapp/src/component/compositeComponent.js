@@ -38,13 +38,11 @@ define(['component/bonusComponent', 'component/purchaseComponent'], function(bon
         setupBonusComponent: function() {
             this.bonusComponent = new bonusComponent();
             this.bonusComponent.initialize();
-            //this.bonusComponent.enableMultipleSelection(true);
-            //this.bonusComponent.disableEdit();
             this.bonusComponent.clearRecordActions();
             this.bonusComponent.addRecordAction({
                 name: 'buy',
                 icon: 'glyphicon-shopping-cart',
-                displayName: 'Aplicar Bono',
+                displayName: 'Apply Bonus',
                 show: true,
                 menu: 'utils'
             },
