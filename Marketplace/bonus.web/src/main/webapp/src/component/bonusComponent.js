@@ -31,7 +31,16 @@ define(['component/_bonusComponent'], function() {
     App.Component.BonusComponent = App.Component._BonusComponent.extend({
         postInit: function(){
             this.toolbarComponent.hideButton("print");
-            this.toolbarComponent.hideButton("search");          
+            this.toolbarComponent.hideButton("search");   
+            this.toolbarComponent.addButton({
+                 name: 'alert',
+                 icon: 'glyphicon-certificate',
+                displayName: 'Apply Bonus',
+                show: true,
+                menu: 'utils'
+            },
+            function(){alert("You just get 10% of disccount!!!");},
+            this);
         }        
     });
     return App.Component.BonusComponent;
